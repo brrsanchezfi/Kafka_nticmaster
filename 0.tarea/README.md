@@ -6,7 +6,7 @@ El objetivo de esta carpeta es facilitar el desarrollo de la tarea.
 
 La carpeta se organiza en los directorios
 
-- **schema**: contiene los schemas de los dos datasets de FarmIA (*.avsc)
+- **datagen**: contiene los datagens de los dos datasets de FarmIA (*.avsc)
 
 - **connectors**: contiene los ficheros de configuración de los conectores a desarrollar (*.json)
 
@@ -23,7 +23,7 @@ para desarrollar la tarea.
 2. Crea la tabla transactions.
 3. Instala los plugins de los conectores.
 4. Copia los drivers JDBC para MySQL.
-5. Copia los schemas AVRO dentro del contenedor de connect.
+5. Copia los datagens AVRO dentro del contenedor de connect.
 
 Se recomienda al alumno ver el contenido del fichero
 
@@ -39,13 +39,13 @@ Con el fin de simular un escenario real y crear interactividad en la tabla de tr
 
 Los conectores proporcionados (en azul) hacen uso del topic **_transactions** para cargar la tabla **sales_transactions** en la bd MySQL
 
-- source-schema-_transactions: Genera transacciones que cumplen el schema requerido
+- source-datagen-_transactions: Genera transacciones que cumplen el datagen requerido
 
 - sink-mysql-_transactions: Escribe las transacciones en la tabla de base de datos 
 
 El alumno es responsable de crear (en rojo) los dos conectores en rojo:
 
-- source-schema-sensor-telemetry [DatagenSource](https://github.com/confluentinc/kafka-connect-schema/blob/master/README.md#configuration) 
+- source-datagen-sensor-telemetry [DatagenSource](https://github.com/confluentinc/kafka-connect-datagen/blob/master/README.md#configuration) 
 
 - source-mysql-sales_transactions [JDBCSource](https://docs.confluent.io/kafka-connectors/jdbc/current/source-connector/overview.html)
 
