@@ -1,8 +1,8 @@
 {
-    "name": "mongodb-sensor-alerts-sink",
+    "name": "sink-mongodb-sensor_alerts",
     "config": {
       "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
-      "connection.uri": "mongodb://admin:adminpassword@mongodb:27017",
+      "connection.uri": "mongodb://admin:secret123@mongodb:27017",
       "database": "farmia_db",
       "collection": "sensor_alerts",
       "topics": "sensor-alerts",

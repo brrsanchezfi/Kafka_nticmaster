@@ -6,14 +6,18 @@
       "connection.user": "user",
       "connection.password": "password",
       "table.whitelist": "sales_transactions",
-      "mode": "timestamp+incrementing",
+      "mode": "timestamp",
       "timestamp.column.name": "timestamp",
-      "incrementing.column.name": "transaction_id",
-      "topic.prefix": "sales-",
+      "topic.prefix": "",
       "poll.interval.ms": "5000",
+      "numeric.mapping": "best_fit",
       "tasks.max": "1",
       "key.converter": "org.apache.kafka.connect.storage.StringConverter",
       "value.converter": "io.confluent.connect.avro.AvroConverter",
-      "value.converter.schema.registry.url": "http://schema-registry:8081"
+      "value.converter.schema.registry.url": "http://schema-registry:8081",
+      "transforms": "renametopic",
+      "transforms.renametopic.type": "org.apache.kafka.connect.transforms.RegexRouter",
+      "transforms.renametopic.regex": "sales_transactions",
+      "transforms.renametopic.replacement": "sales-transactions"
     }
-}
+  }
