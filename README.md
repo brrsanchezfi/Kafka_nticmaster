@@ -24,7 +24,7 @@ Adicionalmente se crearon los siguientes scripts para preparar los requisitos de
 
 ## Arquitectura General
 
-![til](0.tarea\assets\escenario.png)
+![til](0.tarea/assets/escenario.png)
 
 ### Topics Kafka creados
 
@@ -219,7 +219,7 @@ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
 ```sql
 PRINT 'sensor-telemetry' FROM BEGINNING LIMIT 5;
 ```
-![til](task1\imgs\ksqldb-1-sensor_telemetry.png)
+![til](task1/imgs/ksqldb-1-sensor_telemetry.png)
 
 ---
 
@@ -270,7 +270,7 @@ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
 ```sql
 PRINT 'sales-transactions' FROM BEGINNING LIMIT 5;
 ```
-![til](task2\ksqldb-1-sales-transactions.png)
+![til](task2/ksqldb-1-sales-transactions.png)
 ---
 
 ## Tarea 3: Procesamiento en Tiempo Real de Sensores
@@ -342,7 +342,7 @@ SELECT * FROM sensor_alerts_stream EMIT CHANGES LIMIT 10;
 PRINT 'sensor-alerts' FROM BEGINNING LIMIT 5;
 ```
 
-![til](task3\ksqldb-1-sensor-alerts.png)
+![til](task3/ksqldb-1-sensor-alerts.png)
 ---
 
 ## Tarea 4: Procesamiento en Tiempo Real de Transacciones de Ventas
@@ -421,7 +421,7 @@ Formato del mensaje producido:
   "window_end":     1673548260000
 }
 ```
-![til](task4\4.png)
+![til](task4/4.png)
 ---
 
 ## Tarea 5: Integración de MongoDB con Kafka Connect
